@@ -13,7 +13,7 @@ const InvoiceFilters = ({
   handleResetFilters
 }) => {
   return (
-    <div style={{ marginBottom: '1rem' }}>
+    <div className="filters-container">
       <div>
         <label>
           Número de Factura:
@@ -66,6 +66,7 @@ const InvoiceFilters = ({
       </div>
       <button onClick={handleResetFilters}>Resetear Filtros</button>
     </div>
+
   );
 };
 

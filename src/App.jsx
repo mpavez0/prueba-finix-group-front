@@ -1,5 +1,7 @@
 import React from 'react';
 import InvoicePage from './pages/InvoicePage';
+import './index.css';
+
 
 function App() {
   return (

@@ -13,14 +13,14 @@ const CreditNoteModal = ({ invoiceNumber, isOpen, onClose, onSubmit }) => {
       credit_note_amount: Number(creditNoteAmount)
     };
     onSubmit(invoiceNumber, creditNote);
-    
+
     setCreditNoteNumber('');
     setCreditNoteAmount('');
   };
 
   return (
-    <div style={styles.overlay}>
-      <div style={styles.modal}>
+    <div className="modal-overlay">
+      <div className="modal-content">
         <h2>Agregar Nota de Crédito para Factura #{invoiceNumber}</h2>
         <form onSubmit={handleSubmit}>
           <div>
@@ -52,24 +52,25 @@ const CreditNoteModal = ({ invoiceNumber, isOpen, onClose, onSubmit }) => {
         </form>
       </div>
     </div>
+
   );
 };
 
-const styles = {
-  overlay: {
-    position: 'fixed',
-    top: 0, left: 0, right: 0, bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  modal: {
-    background: '#fff',
-    padding: '20px',
-    borderRadius: '5px',
-    width: '300px'
-  }
-};
+// const styles = {
+//   overlay: {
+//     position: 'fixed',
+//     top: 0, left: 0, right: 0, bottom: 0,
+//     backgroundColor: 'rgba(0, 0, 0, 0.5)',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center'
+//   },
+//   modal: {
+//     background: '#fff',
+//     padding: '20px',
+//     borderRadius: '5px',
+//     width: '300px'
+//   }
+// };
 
 export default CreditNoteModal;
